@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { createItem } from '../api';
+import { createItem } from './api';
 
 const Modal = ({ onClose }) => {
   const [nome, setNome] = useState('');
