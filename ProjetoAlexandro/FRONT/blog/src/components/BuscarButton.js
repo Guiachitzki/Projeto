@@ -20,11 +20,11 @@ const CadastroButton = ({ onCadastro }) => {
 
   return (
     <div>
-      <button onClick={handleOpenModal}>Cadastrar Novo Item</button>
+      <button onClick={handleOpenModal}>Buscar Produto</button>
       {showModal && (
         <Modal onClose={handleCloseModal}>
           <h2>Formulário de Cadastro</h2>
-          <button onClick={handleCadastro}>Cadastrar</button>
+          <button onClick={handleCadastro}>Buscar</button>
         </Modal>
       )}
     </div>

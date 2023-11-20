@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { getCardapio, deleteItem } from '../api';
 import CadastroButton from './CadastroButton'; // Importe o componente do botão de cadastro
-import Modal from './modal';
+import BuscaButton from './BuscarButton';
+import CadasroModal from './CadastroModal';
+import BuscaModal from './BuscarModal';
 
 const CardapioList = () => {
     const [cardapio, setCardapio] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    const [showBuscaModal, setShowBuscaModal] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
   
     useEffect(() => {
@@ -56,12 +59,18 @@ const CardapioList = () => {
           />
         </label>
         <button onClick={handleSearch}>Buscar</button>
+        {showBuscaModal && (
+          <BuscaModal
+            onClose={() => setShowBuscaModal(false)}
+            onSearch={handleSearch}
+          />
+        )}
       </div>
         <ul>
           {cardapio.map((item) => (
             <li key={item.id}>
               {item.nome} - R$ {item.preco}{' '}
-              <button onClick={() => handleDelete(item.id)}>Excluir</button>
+              <BuscaButton onClick={() => handleDelete(item.id)}>Excluir</BuscaButton>
             </li>
           ))}
         </ul>

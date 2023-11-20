@@ -1,6 +1,7 @@
 import React from "react";
 import CadastroButton from "../components/CadastroButton";
-import Modal from "../components/modal";
+import BuscarButton from "../components/BuscarButton";
+import CadastroModal from "../components/CadastroModal";
 import { ArticlesContainer, Title, Paragraph } from "../components/ArticlesStyles";
 
 const CardapioList = () => {
@@ -10,10 +11,10 @@ const CardapioList = () => {
             <Paragraph>Cadastrar Produto</Paragraph>
             <CadastroButton />
             <Paragraph>Pesquisar Produto</Paragraph>
-            <CadastroButton />
+            <BuscarButton />
             <Paragraph>Atualizar Produto</Paragraph>
             <CadastroButton />
-            <Paragraph>Excluir </Paragraph>
+            <Paragraph>Excluir Produto</Paragraph>
             <CadastroButton />
         </ArticlesContainer>
     );
