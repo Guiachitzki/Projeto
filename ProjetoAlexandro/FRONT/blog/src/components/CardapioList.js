@@ -6,6 +6,7 @@ import Modal from './modal';
 const CardapioList = () => {
     const [cardapio, setCardapio] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
   
     useEffect(() => {
       fetchCardapio();
@@ -34,10 +35,28 @@ const CardapioList = () => {
       setShowModal(false);
       fetchCardapio(); // Atualiza a lista após o cadastro
     };
+
+    const handleSearch = () => {
+      fetch(`/api/cardapio/buscar?q=${searchTerm}`)
+      .then((response) => response.json())
+      .then((data) => setCardapio(data.results)) // Substituir 'results' pelos resultados reais
+      .catch((error) => console.error('Erro ao buscar itens:', error));
+    };
   
     return (
       <div>
         <h2>Cardápio do Restaurante</h2>
+        <div>
+        <label>
+          Buscar:
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </label>
+        <button onClick={handleSearch}>Buscar</button>
+      </div>
         <ul>
           {cardapio.map((item) => (
             <li key={item.id}>
