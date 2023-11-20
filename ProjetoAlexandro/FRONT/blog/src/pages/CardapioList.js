@@ -13,7 +13,7 @@ const CardapioList = () => {
             <CadastroButton />
             <Paragraph>Atualizar Produto</Paragraph>
             <CadastroButton />
-            <Paragraph>Excluir Produto</Paragraph>
+            <Paragraph>Excluir </Paragraph>
             <CadastroButton />
         </ArticlesContainer>
     );
