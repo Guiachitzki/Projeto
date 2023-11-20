@@ -6,10 +6,15 @@ import { ArticlesContainer, Title, Paragraph } from "../components/ArticlesStyle
 const CardapioList = () => {
     return (
         <ArticlesContainer>
-            <Title>Cadastros</Title>
+            <Title>Gerenciar</Title>
             <Paragraph>Cadastrar Produto</Paragraph>
             <CadastroButton />
-            <Modal />
+            <Paragraph>Pesquisar Produto</Paragraph>
+            <CadastroButton />
+            <Paragraph>Atualizar Produto</Paragraph>
+            <CadastroButton />
+            <Paragraph>Excluir Produto</Paragraph>
+            <CadastroButton />
         </ArticlesContainer>
     );
 };
