@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { getCardapio } from './api';
 
-const Modal = ({ onClose }) => {
+const BuscaModal = ({ onClose }) => {
   const [nome, getNome] = useState('');
-  const [id, gerId] = useState('');
+  const [itemId, getItemId] = useState('');
 }
   const handleBuscao = () => {
     const buscarItem = {
@@ -14,11 +14,11 @@ const Modal = ({ onClose }) => {
   return (
     <div>
       <h2>Buscar Produto</h2>
-      <form>
       <label>
-          ID:
-          <input type="text" value={Id} onChange={(e) => GetId(e.target.value)} />
-        </label>
+        ID do Item:
+        <input type="text" value={itemId} onChange={(e) => getItemId(e.target.value)}/>
+      </label>
+      <form>
         <br />
         <label>
           Nome:
@@ -36,4 +36,4 @@ const Modal = ({ onClose }) => {
   );
 };
 
-export default Modal;
+export default BuscaModal;

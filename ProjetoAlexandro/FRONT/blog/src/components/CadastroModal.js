@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createItem } from './api';
 
-const Modal = ({ onClose }) => {
+const CadastroModal = ({ onClose }) => {
   const [nome, setNome] = useState('');
   const [preco, setPreco] = useState('');
 
@@ -44,4 +44,4 @@ const Modal = ({ onClose }) => {
   );
 };
 
-export default Modal;
+export default CadastroModal;

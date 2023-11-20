@@ -49,6 +49,7 @@ const CardapioList = () => {
     return (
       <div>
         <h2>Cardápio do Restaurante</h2>
+        <AcoesCardapio onSearch={handleSearch} onAtualizar={handleAtualizar} />
         <div>
         <label>
           Buscar:
@@ -77,6 +78,7 @@ const CardapioList = () => {
         <CadastroButton onClick={handleOpenModal} />
         {showModal && <Modal onClose={handleCloseModal} />}
       </div>
+      
     );
   };
   
