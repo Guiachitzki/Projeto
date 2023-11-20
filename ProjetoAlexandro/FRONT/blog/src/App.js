@@ -20,7 +20,7 @@ function App() {
                 <Link to="/">Inicio</Link>
               </li>
               <li>
-                <Link to="/CardapioList">Cadastro</Link>
+                <Link to="/CardapioList">Cadastros</Link>
               </li>
               <li>
                 <Link to="/contact">Contato</Link>
